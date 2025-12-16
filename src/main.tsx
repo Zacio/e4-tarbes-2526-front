@@ -11,6 +11,7 @@ import NavBar from './components/NavBar.tsx'
 import UserCard from './components/BlogCardContainer.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Formulaire from './components/Formulaire.tsx'
+import YathzeeBoard from './components/YathzeeBoard.tsx'
 
 
 
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/theme" element={<ThemeToggle />} />
           <Route path='/userCard' element={<UserCard />} />
           <Route path='/formulaire' element={<Formulaire />} />
+          <Route path='/yathzee' element={<YathzeeBoard />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

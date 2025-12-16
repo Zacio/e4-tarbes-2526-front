@@ -24,6 +24,8 @@ function NavBar() {
             <li><Link to="/theme">Theme</Link></li>
             <li><Link to="/userCard">blogCard</Link></li>
             <li><Link to="/formulaire">formulaire</Link></li>
+            <li><Link to="/yathzee">yathzee</Link></li>
+
             <li><p onClick={() => {navigateRandomPage()}}>Random</p></li>
           </ul>
         </nav>
