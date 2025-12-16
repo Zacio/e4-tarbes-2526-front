@@ -1,8 +1,8 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { ThemeContext } from "./ThemeProvider"
 
 
-export function ThemeToggle() {
+function ThemeToggle() {
     const ctx = useContext(ThemeContext)
     if (!ctx) {
         throw new Error('ThemeToggle must be used within ThemeProvider')
@@ -11,6 +11,10 @@ export function ThemeToggle() {
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
     }
+    useEffect(()=>{
+        document.body.classList.remove('light', 'dark')
+    document.body.classList.add(theme)
+    }, [theme])
     return (
         <button onClick={toggleTheme}>
             Thème: {theme}
@@ -18,3 +22,4 @@ export function ThemeToggle() {
     )
 }
 
+export default ThemeToggle
